@@ -25,42 +25,42 @@ const works = [
         title: "Villa Moderna",
         year: 2025,
         category: "residenziale",
-        image: "https://placehold.jp/600x400.png"
+        image: "https://images.pexels.com/photos/18573914/pexels-photo-18573914.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=600"
     },
     {
         id: 2,
         title: "Casa Essenza",
         year: 2024,
         category: "interior",
-        image: "https://placehold.jp/600x400.png"
+        image: "https://images.pexels.com/photos/7587827/pexels-photo-7587827.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=600"
     },
     {
         id: 3,
         title: "Loft Urbano",
         year: 2025,
         category: "ristrutturazioni",
-        image: "https://placehold.jp/600x400.png"
+        image: "https://images.pexels.com/photos/19893586/pexels-photo-19893586.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=600"
     },
     {
         id: 4,
         title: "Villa Aurora",
         year: 2023,
         category: "residenziale",
-        image: "https://placehold.jp/600x400.png"
+        image: "https://images.pexels.com/photos/32647226/pexels-photo-32647226.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=600"
     },
     {
         id: 5,
         title: "Studio Forma",
         year: 2024,
         category: "interior",
-        image: "https://placehold.jp/600x400.png"
+        image: "https://images.pexels.com/photos/2530586/pexels-photo-2530586.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=600"
     },
     {
         id: 6,
         title: "Casa Rinascita",
         year: 2025,
         category: "ristrutturazioni",
-        image: "https://placehold.jp/600x400.png"
+        image: "https://images.pexels.com/photos/3952095/pexels-photo-3952095.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=600"
     }
 ];
 

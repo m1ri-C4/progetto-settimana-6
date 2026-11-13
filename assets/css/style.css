@@ -39,14 +39,29 @@ header {
     }
 }
 
+/* bottoni dei filtri */
+.btn-filter {
+    background-color: hsl(20, 30%, 35%) !important;
+    color: white !important;
+    border: 1px solid hsl(20, 30%, 35%) !important;
+
+
+    &:hover {
+        background-color: hsl(20, 30%, 27%) !important;
+        border-color: hsl(20, 30%, 27%) !important;
+        color: white !important;
+    }
+}
+
 /* form */
-#form{
+#form {
     max-width: 500px;
     width: 100%;
     margin: 0 auto;
 }
 
-#btn-form {
+#btn-form,
+#dark-mode {
     background-color: hsl(20, 30%, 35%);
 
     &:hover {
