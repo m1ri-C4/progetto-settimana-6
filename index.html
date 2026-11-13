@@ -26,6 +26,7 @@
                         <div class="navbar-nav">
                             <a class="nav-link" href="#studio">Studio</a>
                             <a class="nav-link" href="#servizi">Servizi</a>
+                            <a class="nav-link" href="#lavori">Lavori</a>
                             <a class="nav-link" href="#contatti">Contatti</a>
                             <button id="dark-mode" type="button" class="btn btn-outline-light ms-2">Tema scuro</button>
                         </div>
@@ -56,6 +57,23 @@
 
         </section>
 
+        <section id="lavori" class="container py-5 text-center">
+
+            <h2 class="fw-bold">I nostri lavori</h2>
+            <p class="text-muted mb-5"> Scropri i nostri progetti.</p>
+
+            <div id="filtri" class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+             <button class="btn btn-outline-secondary" id="tutti">Tutti</button>
+             <button class="btn btn-outline-secondary" id="residenziale">Residenziale</button>
+             <button class="btn btn-outline-secondary" id="interior">Interior design</button>
+             <button class="btn btn-outline-secondary" id="ristrutturazioni">Ristrutturazioni</button>
+            </div>
+
+            <div class="row g-4 px-1" id="card-lavori">
+                <!-- creo le card con js-->
+            </div>
+        </section>
+
         <section id="contatti" class="container-fluid py-5 text-center bg-body-tertiary ">
 
             <h2 class="fw-bold">Contattaci</h2>
@@ -80,7 +98,7 @@
                 <textarea id="messaggio" name="messaggio" rows="5" class="form-control mb-3" required></textarea>
 
                 <button id="btn-form" class="btn text-light" type="submit">Invia richiesta</button>
-
+            </form>
         </section>
     </main>
 

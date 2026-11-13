@@ -19,6 +19,52 @@ const services = [
     }
 ];
 
+const works = [
+    {
+        id: 1,
+        title: "Villa Moderna",
+        year: 2025,
+        category: "residenziale",
+        image: "https://placehold.jp/600x400.png"
+    },
+    {
+        id: 2,
+        title: "Casa Essenza",
+        year: 2024,
+        category: "interior",
+        image: "https://placehold.jp/600x400.png"
+    },
+    {
+        id: 3,
+        title: "Loft Urbano",
+        year: 2025,
+        category: "ristrutturazioni",
+        image: "https://placehold.jp/600x400.png"
+    },
+    {
+        id: 4,
+        title: "Villa Aurora",
+        year: 2023,
+        category: "residenziale",
+        image: "https://placehold.jp/600x400.png"
+    },
+    {
+        id: 5,
+        title: "Studio Forma",
+        year: 2024,
+        category: "interior",
+        image: "https://placehold.jp/600x400.png"
+    },
+    {
+        id: 6,
+        title: "Casa Rinascita",
+        year: 2025,
+        category: "ristrutturazioni",
+        image: "https://placehold.jp/600x400.png"
+    }
+];
+
+
 const serviciesCard = document.querySelector('#card-servizi');
 
 //creazione card con le classi bootstrap
@@ -49,6 +95,68 @@ services.forEach((service) => {
     article.append(card);
     serviciesCard.append(article);
 });
+
+const worksCard = document.querySelector('#card-lavori');
+
+//funzione render con all'interno la creazione delle card lavori
+function renderWorks(array) {
+    worksCard.textContent = '';
+
+    array.forEach((work) => {
+        const article = document.createElement('article');
+        article.classList.add('col-12', 'col-md-4');
+
+        const card = document.createElement('div');
+        card.classList.add('card', 'h-100', 'shadow-sm', 'border', 'border-light', 'rounded-3');
+
+        const cardBody = document.createElement('div');
+        cardBody.classList.add('card-body');
+
+        const cardImg = document.createElement('img');
+        cardImg.classList.add('card-img-top');
+        cardImg.src = work.image;
+        cardImg.alt = work.title;
+
+        const cardTitle = document.createElement('h5');
+        cardTitle.classList.add('card-title');
+        cardTitle.textContent = work.title;
+
+        const cardText = document.createElement('p');
+        cardText.classList.add('card-text', 'text-muted');
+        cardText.textContent = work.year;
+
+        cardBody.append(cardTitle, cardText);
+        card.append(cardImg, cardBody);
+        article.append(card);
+        worksCard.append(article);
+    });
+}
+
+renderWorks(works);
+
+//filtra in base alla categoria
+const filtri = document.querySelector('#filtri');
+
+filtri.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const button = e.target.closest('button');
+
+    if (!button || !filtri.contains(button)) return;
+
+    if (button.id === 'tutti') {
+        renderWorks(works);
+    } else {
+        let category = button.id;
+
+        const filteredWorks = works.filter(
+            work => work.category === category
+        );
+
+        renderWorks(filteredWorks);
+    }
+});
+
 
 const form = document.querySelector('#form');
 
