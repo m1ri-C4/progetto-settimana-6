@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* header */
+header {
+    background-color: hsl(20, 20%, 15%);
+    position: sticky;
+    top: 0;
+}
+
+/* hero */
+#studio {
+    background-color: hsl(20, 30%, 35%);
+    min-height: 80vh;
+}
+
+#btn-hero:hover {
+    background-color: hsl(20, 30%, 27%);
+    border: 1px solid hsl(20, 30%, 27%);
+}
+
+
+/* hover sulle card */
+.card {
+    transition: transform 150ms ease;
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+}
