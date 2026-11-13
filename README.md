@@ -611,16 +611,6 @@ La categoria viene recuperata attraverso l'ID del pulsante:
 let category = button.id;
 ```
 
-Poiché il pulsante `#interior-design` ha un ID diverso dal valore `interior` presente negli oggetti, il codice converte questo valore prima di eseguire il filtraggio:
-
-```javascript
-if (category === 'interior-design') {
-    category = 'interior';
-}
-```
-
-In questo modo il valore della categoria corrisponde a quello presente nell'array `works`.
-
 **4. Filtraggio dei progetti con `filter()`**
 
 Il metodo `filter()` scorre gli oggetti dell'array `works` e verifica se la proprietà `category` corrisponde alla categoria selezionata.
