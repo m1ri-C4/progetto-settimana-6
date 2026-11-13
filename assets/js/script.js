@@ -21,6 +21,7 @@ const services = [
 
 const serviciesCard = document.querySelector('#card-servizi');
 
+//creazione card con le classi bootstrap
 services.forEach((service) => {
     const article = document.createElement('article');
     article.classList.add('col-12', 'col-md-4');
@@ -49,9 +50,53 @@ services.forEach((service) => {
     serviciesCard.append(article);
 });
 
+const form = document.querySelector('#form');
+
+//reset e messaggio di ringraziamento del form con le classi bootstrap
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const thanks = document.createElement('div');
+    thanks.classList.add('alert', 'alert-info', 'mt-3');
+    thanks.classList.add('alert-dismissible');
+    thanks.setAttribute('role', 'alert');
+    thanks.textContent = 'Grazie! Abbiamo ricevuto la tua richiesta';
+
+    const close = document.createElement('button');
+    close.setAttribute('type', 'button');
+    close.classList.add('btn-close', 'md-3');
+    close.setAttribute('data-bs-dismiss', 'alert')
+    close.setAttribute('aria-label', 'Close');
+
+    thanks.append(close);
+    form.append(thanks);
+    form.reset();
+    email.classList.remove('is-valid', 'is-invalid');
+});
+
+const email = document.querySelector('#email');
+
+//validazione email con Regex e classi bootstrap
+email.addEventListener('blur', (e) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (email.value.trim() === '') {
+        email.classList.add('is-invalid');
+        email.classList.remove('is-valid');
+
+    } else if (!emailRegex.test(email.value.trim())) {
+        email.classList.add('is-invalid');
+        email.classList.remove('is-valid');
+
+    } else {
+        email.classList.remove('is-invalid');
+        email.classList.add('is-valid');
+    }
+});
+
 const darkMode = document.querySelector('#dark-mode');
 
-// funzione bottone dark mode
+// funzione bottone dark mode con attributo bootstrap
 darkMode.addEventListener('click', (e) => {
     e.preventDefault();
     if (document.body.getAttribute('data-bs-theme') === 'light') {
