@@ -4,11 +4,17 @@
     box-sizing: border-box;
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* header */
 header {
     background-color: hsl(20, 20%, 15%);
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 /* hero */
@@ -28,6 +34,27 @@ header {
     transition: transform 150ms ease;
 
     &:hover {
-        transform: translateY(-10px);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12) !important;
     }
+}
+
+/* form */
+#form{
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#btn-form {
+    background-color: hsl(20, 30%, 35%);
+
+    &:hover {
+        background-color: hsl(20, 30%, 27%);
+    }
+}
+
+/*footer*/
+footer {
+    background-color: hsl(20, 20%, 15%);
 }

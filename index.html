@@ -41,9 +41,7 @@
         <p class="text-light mx-4">Progettiamo case, uffici e spazi commerciali con attenzione alla luce, ai materiali e
             al contesto.</p>
 
-        <button id="btn-hero" type="button" class="btn border-none text-light" href="#contatti">Inizia un
-            progetto</button>
-
+        <a id="btn-hero" href="#contatti" class="btn border-0 text-light"> Inizia un progetto </a>
     </hero>
 
     <main>
@@ -58,10 +56,68 @@
 
         </section>
 
-        <section>
-            
+        <section id="contatti" class="container-fluid py-5 text-center bg-light ">
+
+            <h2 class="fw-bold">Contattaci</h2>
+            <p class="text-muted mb-5"> Compila il form, ti rispondiamo entro 48 ore.</p>
+
+            <form id="form" class="d-flex flex-column">
+                <label for="nome" class="form-label text-start">Nome</label>
+                <input type="text" id="nome" name="nome" class="form-control mb-3" required>
+
+                <label for="email" class="form-label text-start">Email</label>
+                <input type="email" id="email" name="email" class="form-control mb-3" required>
+
+                <label for="servizio" class="form-label text-start">Servizio</label>
+                <select id="servizio" name="servizio" class="form-select mb-3">
+                    <option value="SS">Residenziale</option>
+                    <option value="WB">Interior design</option>
+                    <option value="IV">Ristrutturazioni</option>
+                </select>
+
+                <label for="messaggio" class="form-label text-start">Messaggio</label><br>
+                <textarea id="messaggio" name="messaggio" rows="5" class="form-control mb-3" required></textarea>
+
+                <button id="btn-form" class="btn text-light" type="submit">Invia richiesta</button>
+
         </section>
     </main>
+
+
+    <footer class="container-fluid text-light py-5">
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-12 col-md-4">
+                    <p class="fw-bold mb-1">Atelier</p>
+                    <p class="mb-0">Studio di architettura</p>
+                    <p class="mb-0">Via dei Pioppi 12, Milano</p>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <p class="fw-bold mb-1">Link</p>
+                    <p class="mb-0">Studio</p>
+                    <p class="mb-0">Servizi</p>
+                    <p class="mb-0">Contatti</p>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <p class="fw-bold mb-1">Contatti</p>
+                    <p class="mb-0">info@atelier.example</p>
+                    <p class="mb-0">+39 02 0000 1111</p>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <p class="text-center mb-0">
+                © 2026 Atelier — tutti i diritti riservati
+            </p>
+
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
